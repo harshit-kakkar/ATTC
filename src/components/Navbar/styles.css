@@ -1,0 +1,31 @@
+
+.sidenav a {
+    
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    padding: 1em 2em 1em
+
+  }
+
+  .sidenav ul li{
+    margin: 3em 0 20px
+  }
+
+  div>ul>li{
+    list-style-type: none;
+
+} 
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+.sidenav a:hover {
+    color: white;
+    background-color: #5369FA;
+    border-radius: 0.2cm;
+    
+    
+  }
