@@ -1,9 +1,8 @@
 .container{
     display: flex;
     flex-direction: row;
-    height: 100vh;
+    height: 91.9vh;
     
-
 }
 .nav-div{
     background-color: #323D4F;
