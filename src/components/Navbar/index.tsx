@@ -1,12 +1,16 @@
 import React from 'react';
 import './styles.css'
 
-const Navbar = () => {
+interface NavbarProps {
+    setClickedTab: (clickedTab:number) => void;
+}
+
+const Navbar = (props:NavbarProps) => {
     return (
         <div className="sidenav">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Vehicles</a></li>
+                <li><a onClick={()=>{props.setClickedTab(1)}}>Home</a></li>
+                <li><a onClick={()=>{props.setClickedTab(2)}}>Vehicles</a></li>
             </ul>
         </div>
     )

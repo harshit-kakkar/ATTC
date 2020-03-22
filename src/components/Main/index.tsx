@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../Navbar'
 import Homepage from '../Homepage'
+import Vehicles from '../Vehicles'
 import './styles.css'
 
 
@@ -17,10 +18,14 @@ const Main = () => {
     const loadSelectedTab = () => {
         if (clickedTab==1){
             return (
-                <div className="main-sec">
                     <Homepage />
 
-                </div>
+            )
+        }
+
+        if (clickedTab==2){
+            return (
+                    <Vehicles />
             )
         }
     }
@@ -29,11 +34,13 @@ const Main = () => {
     return (
         <div className="container">
             <div className="nav-div">
-                <Navbar />
+                <Navbar setClickedTab ={setSelectedTab}/>
             </div>
             
-            {loadSelectedTab()}
-            
+            <div className="main-sec">
+                {loadSelectedTab()}
+            </div>
+
         </div>
         
     );
