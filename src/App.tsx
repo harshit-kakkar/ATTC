@@ -7,7 +7,12 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Automated Toll Tax Collection</h1>
+        <div className="head-container">
+          <h1>Automated Toll Tax Collection</h1>
+        </div>
+        <div className="logout">
+          <p>Logout</p>
+        </div>
       </header>
       <section>
         <Main />
