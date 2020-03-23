@@ -3,6 +3,7 @@ import Navbar from '../Navbar'
 import Homepage from '../Homepage'
 import Vehicles from '../Vehicles'
 import './styles.css'
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 
 
