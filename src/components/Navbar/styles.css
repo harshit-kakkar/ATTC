@@ -1,5 +1,5 @@
 
-.sidenav a {
+li {
     
     text-decoration: none;
     font-size: 20px;
@@ -14,18 +14,24 @@
 
   div>ul>li{
     list-style-type: none;
+    text-decoration: none;
 
 } 
 
 ul{
     margin: 0;
     padding: 0;
+    text-decoration: none;
 }
 
-.sidenav a:hover {
+.sidenav li:hover {
     color: white;
     background-color: #5369FA;
     border-radius: 0.2cm;
     
     
+  }
+
+  .home-nav{
+    text-decoration: none;
   }

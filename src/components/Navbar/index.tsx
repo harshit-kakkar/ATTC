@@ -1,5 +1,6 @@
 import React from 'react';
 import './styles.css'
+import {Link} from 'react-router-dom'
 
 interface NavbarProps {
     setClickedTab: (clickedTab:number) => void;
@@ -9,8 +10,12 @@ const Navbar = (props:NavbarProps) => {
     return (
         <div className="sidenav">
             <ul>
-                <li><a onClick={()=>{props.setClickedTab(1)}}>Home</a></li>
-                <li><a onClick={()=>{props.setClickedTab(2)}}>Vehicles</a></li>
+                <Link to='/home'>
+                    <li className="home-nav">Home</li>
+                </Link>
+                <Link to='vehicles'>
+                    <li>Vehicles</li>
+                </Link>
             </ul>
         </div>
     )

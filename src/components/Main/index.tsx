@@ -3,7 +3,7 @@ import Navbar from '../Navbar'
 import Homepage from '../Homepage'
 import Vehicles from '../Vehicles'
 import './styles.css'
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom';
 
 
 
@@ -16,33 +16,24 @@ const Main = () => {
         setClickedTab(selectedTab)
     }
 
-    const loadSelectedTab = () => {
-        if (clickedTab==1){
-            return (
-                    <Homepage />
-
-            )
-        }
-
-        if (clickedTab==2){
-            return (
-                    <Vehicles />
-            )
-        }
-    }
-
-
+    
     return (
-        <div className="container">
-            <div className="nav-div">
-                <Navbar setClickedTab ={setSelectedTab}/>
-            </div>
-            
-            <div className="main-sec">
-                {loadSelectedTab()}
-            </div>
+        <Router>
+            <div className="container">
+                <div className="nav-div">
+                    <Navbar setClickedTab ={setSelectedTab}/>
+                </div>
+                
+                <div className="main-sec">
+                    <Switch>
+                        <Route path="/home" component={Homepage} />
+                        <Route path="/vehicles" component={Vehicles} />
+                        <Route render={() => <Redirect to={{pathname: "/home"}} />} />
+                    </Switch>
+                </div>
 
-        </div>
+            </div>
+        </Router>
         
     );
 }
