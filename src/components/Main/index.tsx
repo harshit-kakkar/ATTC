@@ -10,18 +10,11 @@ import {BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom
 
 const Main = () => {
 
-    const [clickedTab, setClickedTab] = React.useState(1);
-
-    const setSelectedTab = (selectedTab: number)=> {
-        setClickedTab(selectedTab)
-    }
-
-    
     return (
         <Router>
             <div className="container">
                 <div className="nav-div">
-                    <Navbar setClickedTab ={setSelectedTab}/>
+                    <Navbar/>
                 </div>
                 
                 <div className="main-sec">

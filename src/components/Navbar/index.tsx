@@ -1,21 +1,39 @@
 import React from 'react';
 import './styles.css'
-import {Link} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 
-interface NavbarProps {
-    setClickedTab: (clickedTab:number) => void;
+const TabInit = () => {
+    if (window.location.pathname=='/home'){
+        return 1
+    }
+    else{
+        return 2
+    }
 }
 
-const Navbar = (props:NavbarProps) => {
+
+const Navbar = () => {
+
+    const [clickedTab, setClickedTab] = React.useState(TabInit());
+    const setSelectedTab = (selectedTab: number)=> {
+        setClickedTab(selectedTab)
+    }
+
+
     return (
         <div className="sidenav">
             <ul>
-                <Link to='/home'>
-                    <li className="home-nav">Home</li>
-                </Link>
-                <Link to='vehicles'>
-                    <li>Vehicles</li>
-                </Link>
+                <NavLink to='/home' exact activeClassName="active" >
+                    <li onClick={()=>setSelectedTab(1)}
+                        className={clickedTab!==1? "": "selected-tab-nav"}
+                    >Home</li>
+                </NavLink>
+                <NavLink to='vehicles' exact activeClassName="active">
+                    <li 
+                    onClick={()=>setSelectedTab(2)}
+                    className={clickedTab!==2? "": "selected-tab-nav"}
+                    >Vehicles</li>
+                </NavLink>
             </ul>
         </div>
     )

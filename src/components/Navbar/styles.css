@@ -32,6 +32,11 @@ ul{
     
   }
 
-  .home-nav{
-    text-decoration: none;
+  .selected-tab-nav{
+    background-color: #5369FA;
+    color: white;
+    border-radius: 0.2cm;
   }
+
+
+
