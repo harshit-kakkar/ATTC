@@ -1,12 +1,3 @@
-.welcome-text{
-    margin-top: 4em;
-}
-
-.balance{
-    float: left;
-    margin-left: 1em;
-}
-
 .nav-div{
     background-color: #323D4F;
     width: 15%;
@@ -15,7 +6,7 @@
     
 }
 
-.homepage{
+.vehicles{
     background-color: coral;
     width: 85%;
 }
