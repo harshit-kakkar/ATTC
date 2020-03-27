@@ -3,7 +3,7 @@ import './styles.css'
 import {NavLink} from 'react-router-dom'
 
 const TabInit = () => {
-    if (window.location.pathname=='/vehicles'){
+    if (window.location.pathname==='/vehicles'){
         return 2
     }
     else{

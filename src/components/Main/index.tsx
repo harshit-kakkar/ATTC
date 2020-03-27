@@ -19,7 +19,7 @@ const Main = () => {
                         <Route path="/login" component={Login} />
                         <Route path="/home" component={Homepage} />
                         <Route path="/vehicles" component={Vehicles} />
-                        <Route render={() => <Redirect to={{pathname: "/home"}} />} />
+                        <Route render={() => <Redirect to={{pathname: "/login"}} />} />
                     </Switch>
                 </div>
 

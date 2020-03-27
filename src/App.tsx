@@ -1,24 +1,11 @@
 import React from 'react';
 import './App.css';
 import Main from './components/Main'
-import Login from './components/Login'
-import {BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom';
+import {BrowserRouter as Router,} from 'react-router-dom';
 
 
 
 function App() {
-  // function LoadFunction(){
-  //   if (window.location.pathname=='/login'){
-  //     return(
-  //       <Login />
-  //     )
-  //   }
-  //   else{
-  //     return(
-  //       <Main />
-  //     )
-  //   }
-  // }
   return (
     <Router>
       <div className="App">
@@ -31,7 +18,6 @@ function App() {
           </div>
         </header>
         <section>
-          {/* {LoadFunction()} */}
           <Main />
         </section>
       </div>
