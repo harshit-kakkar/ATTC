@@ -17,7 +17,7 @@ function App() {
             <p>Logout</p>
           </div>
         </header>
-        <section>
+        <section className="section-container">
           <Main />
         </section>
       </div>

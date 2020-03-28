@@ -12,18 +12,14 @@ const Main = () => {
 
     return (
         <Router>
-            <div>
+  
+                <Switch>
+                    <Route path="/login" component={Login} />
+                    <Route path="/home" component={Homepage} />
+                    <Route path="/vehicles" component={Vehicles} />
+                    <Route render={() => <Redirect to={{pathname: "/login"}} />} />
+                </Switch>
 
-                <div>
-                    <Switch>
-                        <Route path="/login" component={Login} />
-                        <Route path="/home" component={Homepage} />
-                        <Route path="/vehicles" component={Vehicles} />
-                        <Route render={() => <Redirect to={{pathname: "/login"}} />} />
-                    </Switch>
-                </div>
-
-            </div>
         </Router>
         
     );

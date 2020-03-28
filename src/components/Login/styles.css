@@ -1,3 +1,36 @@
 .login-container{
-    background-color: blue;
+    min-height: 91.9vh;
+    background-color: #323D4F;
+    display: flex;
+    flex-direction: column;
+}
+.login{
+    margin-top: 5%;
+
+}
+.login-head{
+    color: white;
+    font-size: 2em;
+    margin-bottom: 3em;
+    
+}
+
+.input-phone, .input-password{
+    width: 15%;
+    height: 2em;
+    border-radius: 1em;
+    font-size: 1em;
+    padding: 1em;
+
+}
+
+
+.login-button{
+    background-color: rgb(37, 37, 134);
+    color: white;
+    width: 10%;
+    height: 2em;
+    font-size: 1.5em;
+    margin-top: 1em;
+    border-radius: 18px;
 }

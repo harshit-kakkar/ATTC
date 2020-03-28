@@ -5,12 +5,21 @@ import './styles.css'
 const Login = () => {
     return (
         <div className="login-container">
-            <h1>Login Page</h1>
-            <Link to='/home'>
-                <button>
+            <div className="login">
+                <div className="login-head">
                     Login
-                </button>
-            </Link>
+                </div>
+                <div ><input className="input-phone" type="text" placeholder="Phone"/></div>
+                <br></br>
+                <div><input  className="input-password" type="password" placeholder="password"/></div>
+                <br></br>
+                <Link to='/home'>
+                    <button className="login-button">
+                        Login
+                    </button>
+                </Link>
+            </div>
+
             
         </div>
     )
