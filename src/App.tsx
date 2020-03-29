@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
 import Main from './components/Main'
-import {BrowserRouter as Router,} from 'react-router-dom';
+import Login from './components/Login'
+import {BrowserRouter as Router, Route, Switch, Redirect} from 'react-router-dom';
 
 
 
@@ -18,7 +19,11 @@ function App() {
           </div>
         </header>
         <section className="section-container">
-          <Main />
+          <Switch>
+            <Route path="/login" component={Login} />
+            <Route path="/main" component={Main} />
+            <Route render={() => <Redirect to={{pathname: "/login"}} />} />
+          </Switch>
         </section>
       </div>
     </Router>

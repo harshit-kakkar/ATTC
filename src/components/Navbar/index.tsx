@@ -1,9 +1,9 @@
 import React from 'react';
 import './styles.css'
-import {NavLink} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 const TabInit = () => {
-    if (window.location.pathname==='/vehicles'){
+    if (window.location.pathname==='/main/vehicles'){
         return 2
     }
     else{
@@ -23,17 +23,17 @@ const Navbar = () => {
     return (
         <div className="sidenav">
             <ul>
-                <NavLink to='/home' exact activeClassName="active" >
+                <Link to='/main/home'>
                     <li onClick={()=>setSelectedTab(1)}
                         className={clickedTab!==1? "": "selected-tab-nav"}
                     >Home</li>
-                </NavLink>
-                <NavLink to='vehicles' exact activeClassName="active">
+                </Link>
+                <Link to='/main/vehicles'>
                     <li 
                     onClick={()=>setSelectedTab(2)}
                     className={clickedTab!==2? "": "selected-tab-nav"}
                     >Vehicles</li>
-                </NavLink>
+                </Link>
             </ul>
         </div>
     )

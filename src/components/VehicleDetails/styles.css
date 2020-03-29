@@ -1,0 +1,7 @@
+.vehicle-details-container{
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    background-color: violet;
+
+}

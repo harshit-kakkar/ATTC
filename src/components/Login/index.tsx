@@ -13,7 +13,7 @@ const Login = () => {
                 <br></br>
                 <div><input  className="input-password" type="password" placeholder="password"/></div>
                 <br></br>
-                <Link to='/home'>
+                <Link to='/main/home'>
                     <button className="login-button">
                         Login
                     </button>

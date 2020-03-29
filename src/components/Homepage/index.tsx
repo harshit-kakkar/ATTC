@@ -1,5 +1,4 @@
 import React from 'react'
-import Navbar from '../Navbar'
 import './styles.css'
 
 
@@ -8,19 +7,16 @@ let balanceMoney: number = 300
 
 const Homepage = () => {
     return (
-        <div className="container" >
-            <div className="nav-div">
-                <Navbar/>
+        
+        <div className="homepage">
+            <div className="welcome-text">
+                <h1>{welcomeText}</h1>
             </div>
-            <div className="homepage">
-                <div className="welcome-text">
-                    <h1>{welcomeText}</h1>
-                </div>
-                <div className="balance">
-                    <p>Your current balance is Rs {balanceMoney}</p>
-                </div>
+            <div className="balance">
+                <p>Your current balance is Rs {balanceMoney}</p>
             </div>
         </div>
+        
     )
 }
 
