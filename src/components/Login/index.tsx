@@ -14,6 +14,7 @@ const Login = (props : any) => {
             .then(response => {
               
                 if (response.status = 200){   
+                    props.setPhone(data.phone)
                     props.history.push("/main/home")
                 }
             })

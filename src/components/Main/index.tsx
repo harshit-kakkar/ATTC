@@ -8,7 +8,7 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 
 
-const Main = () => {
+const Main = (props : any) => {
 
     return (
         <Router>
@@ -17,8 +17,15 @@ const Main = () => {
                         <Navbar/>
                 </div>
                     <Switch>
-                        <Route path="/main/home" component={Homepage} />
-                        <Route path="/main/vehicles" component={Vehicles} />
+                        <Route 
+                            path="/main/home" 
+                            component={Homepage} 
+                        />
+
+                        <Route 
+                            path="/main/vehicles" 
+                            component={Vehicles} 
+                        />
                     </Switch>
             </div>
 
