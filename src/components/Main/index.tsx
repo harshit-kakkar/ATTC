@@ -9,6 +9,7 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 
 const Main = (props : any) => {
+    var phone_no = props.phone
 
     return (
         <Router>
@@ -19,7 +20,7 @@ const Main = (props : any) => {
                     <Switch>
                         <Route 
                             path="/main/home" 
-                            component={Homepage} 
+                            render={(props) => <Homepage {...props} phone={phone_no} />}
                         />
 
                         <Route 

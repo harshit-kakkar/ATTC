@@ -8,7 +8,7 @@ import {BrowserRouter as Router, Route, Switch, Redirect} from 'react-router-dom
 
 function App() {
 
-  const [phone, setPhone] = useState("")
+  const [phone, setPhone] = useState("12345")
   const changePhone = (phone: string) => {
     setPhone(phone)
 
