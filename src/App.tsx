@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import './App.css';
 import Main from './components/Main'
 import Login from './components/Login'
-import {BrowserRouter as Router, Route, Switch, Redirect} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch, Redirect, Link} from 'react-router-dom';
 
 
 
@@ -21,9 +21,11 @@ function App() {
           <div className="head-container">
             <h1>Automated Toll Tax Collection</h1>
           </div>
+          
           <div className="logout">
-            <p>Logout</p>
+            <Link to='/login'><p className="logout-p">Logout</p></Link>
           </div>
+          
         </header>
         <section className="section-container">
           <Switch>
