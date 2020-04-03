@@ -10,6 +10,8 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 const Main = (props : any) => {
     var phone_no = props.phone
+    const [userId, setUserId] = React.useState(-1);
+    console.log(userId)
 
     return (
         <Router>
@@ -20,12 +22,12 @@ const Main = (props : any) => {
                     <Switch>
                         <Route 
                             path="/main/home" 
-                            render={(props) => <Homepage {...props} phone={phone_no} />}
+                            render={(props) => <Homepage {...props} phone={phone_no} changeId={setUserId} />}
                         />
 
                         <Route 
                             path="/main/vehicles" 
-                            component={Vehicles} 
+                            render={(props) => <Vehicles {...props} phone={phone_no} userId={userId} />}
                         />
                     </Switch>
             </div>

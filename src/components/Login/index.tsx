@@ -12,9 +12,6 @@ const Login = (props : any) => {
     const onSubmit = (data: any) => {
         axios.post('http://localhost:5000/login', data)
             .then(response => {
-                console.log(typeof(data), data)
-                console.log(typeof(data.phone), data.phone)
-
               
                 if (response.status = 200){   
                     props.setPhone(data.phone)
