@@ -8,6 +8,8 @@ import {BrowserRouter as Router, Route, Switch, Redirect, Link} from 'react-rout
 
 function App() {
 
+              // The below state keeps the phone number of the user that gets updated on login and is passed as props to other components.
+
   const [phone, setPhone] = useState("12345")
   const changePhone = (phone: string) => {
     setPhone(phone)
@@ -17,6 +19,9 @@ function App() {
   return (
     <Router>
       <div className="App">
+
+                                  {/* The header tag below contains the header for the whole application  */}
+
         <header className="App-header">
           <div className="head-container">
             <h1>Automated Toll Tax Collection</h1>
@@ -27,10 +32,14 @@ function App() {
           </div>
           
         </header>
+
+                                      {/* The section tag keeps on changing according to events and routes. */}
+
         <section className="section-container">
           <Switch>
               <Route 
                   path="/login"
+                                          // Sending the function "changePhone", that can update the state above.
                   render={(props) => <Login {...props} setPhone={changePhone} />}
                 />
             <Route 

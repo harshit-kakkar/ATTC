@@ -6,6 +6,10 @@ import { Switch, BrowserRouter as Router, Route } from 'react-router-dom'
 
 
 
+// This component is like a middle-ground for the whole user-vehicles requests i.e. -
+//        1. To view the vehicles list he owns, "VehiclesList" component.
+//        2. To view the details of a particular vehicle he/she owns, "VehicleDetails" component.
+
 
 const Vehicles = (props:any)=>{
 

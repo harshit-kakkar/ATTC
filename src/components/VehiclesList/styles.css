@@ -26,7 +26,13 @@
     margin-top: 2em;
 }
 
-.details-button{
+.details-button-div{
     position: relative;
     left:8em;
+}
+
+.details-btn{
+    background-color: green;
+    color: white;
+    padding: 1em;
 }

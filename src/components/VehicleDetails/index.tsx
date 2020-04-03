@@ -2,16 +2,12 @@ import React from 'react'
 import './styles.css'
 import axios from 'axios'
 
-// interface any{
-//     car_number : number
-// }
-// function for_console(props1 : any){
-//     console.log(props1.match.params.vehicle)
-// }
 
 var toll_tax_price = 40;
 
 const VehicleDetails = (props : any) => {
+
+            // Populating the details of a vehicle using the below state.
 
     const [tollsCrossed, setTollsCrossed] = React.useState([])
     const PopulateTollDetails = ((tollsData : any) => {

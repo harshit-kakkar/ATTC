@@ -7,6 +7,8 @@ import './styles.css'
 
 const Login = (props : any) => {
 
+    //useForm hook to handle the form data.
+
     const { handleSubmit, register} = useForm();
 
     const onSubmit = (data: any) => {
@@ -15,6 +17,8 @@ const Login = (props : any) => {
               
                 if (response.status = 200){   
                     props.setPhone(data.phone)
+
+                    //Changing the route by pushing it to props sent by "Route" of the "react-router-dom"
                     props.history.push("/main/home")
                 }
             })
