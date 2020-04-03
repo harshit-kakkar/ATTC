@@ -11,7 +11,6 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 const Main = (props : any) => {
     var phone_no = props.phone
     const [userId, setUserId] = React.useState(-1);
-    console.log(userId)
 
     return (
         <Router>

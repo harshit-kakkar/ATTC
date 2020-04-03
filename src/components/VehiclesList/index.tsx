@@ -3,18 +3,6 @@ import {Link} from 'react-router-dom'
 import './styles.css'
 import axios from 'axios'
 
-// var vehicles = [
-//     {
-//         "Vehicle_Number" : "WQ123",
-//         "Vehicle_Type" : "Car"
-//     },
-//     {
-//         "Vehicle_Number" : "HR789",
-//         "Vehicle_Type" : "Truck"
-//     }
-
-// ]
-
 
 const VehiclesList = (props : any) => {
 
@@ -23,7 +11,6 @@ const VehiclesList = (props : any) => {
         setVehiclesList(vehiclesData)
     }) 
 
-    console.log(props)
     var url = "http://localhost:5000/car"
     
     React.useEffect(() => {
@@ -33,7 +20,6 @@ const VehiclesList = (props : any) => {
             }
           })
             .then(response => {
-                console.log(response.data)
                 PopulateVehiclesList(response.data)
                 })
             .catch(error => {

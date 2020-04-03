@@ -5,3 +5,26 @@
     background-color: violet;
 
 }
+
+.vehicle-details-header{
+    font-size: 2em;
+    margin-top: 2em;
+
+}
+
+.all-tolls-container{
+    display: flex;
+    flex-direction: column;
+    margin-right: 50%;
+    margin-left: 10%;
+    margin-top: 3em;
+
+}
+
+.toll-container{
+    border: 1px black solid;
+    font-size: 1.25em;
+    margin-bottom: 1.5em;
+    padding: 1em;
+    
+}
