@@ -27,6 +27,45 @@ const Homepage = (props : any) => {
     }, [])
 
 
+    const [rechargeInputOpen, setRechargeInputOpen] = React.useState(false)
+    const changeRechargeInputOpen = (() => {
+        if (rechargeInputOpen){
+            setRechargeInputOpen(false)
+        }
+        else{
+            setRechargeInputOpen(true)
+        }
+    })
+
+    function rechargeButtonText(){
+        if (rechargeInputOpen){
+            return "Cancel"
+        }
+        else{
+            return "Recharge"
+        }
+    }
+
+    const [input, setInput] = React.useState('');
+ 
+
+    function rechargeConfirm(){
+        changeRechargeInputOpen()
+        var bal = parseInt(input, 10)
+        var rechargeRequestData = {"phone" : phone_no, "balance" : bal}
+        const rechargeUrl = "http://localhost:5000/recharge"
+        axios.put(rechargeUrl, rechargeRequestData)
+            .then(response => {
+                var newBalanceUpdate = {"name" : dataJson["name"], "balance" : response.data["balance"]}
+                changeData(newBalanceUpdate)
+            })
+            .catch(error => {
+                console.log(error)
+            })
+        
+    }
+
+
     return (
         
         <div className="homepage">
@@ -35,6 +74,17 @@ const Homepage = (props : any) => {
             </div>
             <div className="balance">
                 <p>Your current balance is Rs {dataJson["balance"]}</p>
+            </div>
+
+            <div className="recharge-container">
+                <div>
+                    <button className={!rechargeInputOpen? "recharge":"recharge-cancel"} onClick={changeRechargeInputOpen}>{rechargeButtonText()}</button>
+                </div>
+
+                <div className={rechargeInputOpen? "recharge-input":"recharge-input-close"}>
+                    <input className="recharge-input-box" placeholder="Amount" value={input} onChange={(e) => setInput(e.target.value)}></input>
+                    <button className="confirm-recharge-btn" onClick={rechargeConfirm}>Confirm</button>
+                </div>
             </div>
         </div>
         

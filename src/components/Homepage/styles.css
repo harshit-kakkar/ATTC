@@ -4,7 +4,8 @@
 
 .balance{
     float: left;
-    margin-left: 1em;
+    margin-left: 4em;
+    margin-top: 6em;
 }
 
 
@@ -14,9 +15,57 @@
     width: 85%;
 }
 
-.container{
+/* .container{
     display: flex;
     flex-direction: row;
     height: 91.9vh;
     
+} */
+
+.recharge-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.recharge{
+    background-color: green;
+    padding: 1em;
+    color: white;
+    font-size: 1em;
+    margin-top: 5em;
+    border-radius: 0.75em;
+}
+
+.recharge-cancel{
+    background-color: red;
+    padding: 1em;
+    color: white;
+    font-size: 1em;
+    margin-top: 5em;
+    border-radius: 0.75em;
+}
+
+.recharge-input{
+    color: white;
+    width: 20%;
+    margin-left: 45%;
+    margin-top: 2em;
+}
+
+.recharge-input-close{
+    display: none;
+}
+
+.recharge-input-box{
+    height: 1em;
+    width: 6em;
+    padding: 1em;
+    margin-right: 0.75em;
+}
+
+.confirm-recharge-btn{
+    background-color: blue;
+    color: white;
+    font-size: 1em;
+    padding: 0.75em;
 }
