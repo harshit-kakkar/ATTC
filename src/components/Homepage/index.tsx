@@ -13,7 +13,8 @@ const Homepage = (props : any) => {
     var phone_json = {"phone" : phone_no}
 
 
-    const url = "http://localhost:5000/home";
+    // const url = "http://localhost:5000/home";
+    const url = "https://attc-backend.herokuapp.com/home";
 
     React.useEffect(()=>{
         axios.post(url, phone_json)

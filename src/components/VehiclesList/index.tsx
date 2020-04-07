@@ -13,7 +13,9 @@ const VehiclesList = (props : any) => {
         setVehiclesList(vehiclesData)
     }) 
 
-    var url = "http://localhost:5000/car"
+    // var url = "http://localhost:5000/car"
+    var url = "https://attc-backend.herokuapp.com/car"
+
     
     React.useEffect(() => {
                     //Sending the id of the user as parameter and not in the body, since it is a get request.

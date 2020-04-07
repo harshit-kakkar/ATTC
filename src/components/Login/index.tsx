@@ -12,7 +12,8 @@ const Login = (props : any) => {
     const { handleSubmit, register} = useForm();
 
     const onSubmit = (data: any) => {
-        axios.post('http://localhost:5000/login', data)
+        // axios.post('http://localhost:5000/login', data)
+        axios.post('https://attc-backend.herokuapp.com/login', data)
             .then(response => {
               
                 if (response.status = 200){   
