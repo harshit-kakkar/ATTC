@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import './App.css';
 import Main from './components/Main'
 import Login from './components/Login'
+import Admin from './components/Admin'
 import {BrowserRouter as Router, Route, Switch, Redirect, Link} from 'react-router-dom';
 
 
@@ -45,6 +46,12 @@ function App() {
             <Route 
                   path="/main" 
                   render={(props) => <Main {...props} phone={phone} />} 
+                />
+
+            <Route
+                   path="/admin"
+                   component={Admin}
+
                 />
             <Route render={() => <Redirect to={{pathname: "/login"}} />} />
           </Switch>
