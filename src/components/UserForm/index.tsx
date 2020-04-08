@@ -6,11 +6,33 @@ import {useForm} from 'react-hook-form'
 
 
 const UserForm = () => {
+
+
+    const { handleSubmit, register} = useForm();
+
+    const url = 'https://attc-backend.herokuapp.com/signup';
+    const onSubmit = (data: any) => {
+        axios.post(url, data)
+            .then(response => {
+                console.log(response)
+                if(response.status == 200){
+                    alert("Created new user")
+                }
+            })
+            .catch(error => {
+                console.log(error)
+                alert("Couldn't create the User")
+                
+            })
+    }
+
+
+
     return (
 
 
         <div className="admin-user-form">
-                <form>
+                <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="user-details">
                         USER DETAILS
                     </div>
@@ -23,7 +45,11 @@ const UserForm = () => {
                                     First Name
                                 </div>
                                 <div className="first-name-input">
-                                    <input className="create-user-ip" />
+                                    <input 
+                                        className="create-user-ip" 
+                                        name="first_name"
+                                        ref={register}
+                                        />
                                 </div>
                             </div>
                             <div className="last-name">
@@ -31,7 +57,11 @@ const UserForm = () => {
                                     Last Name
                                 </div>
                                 <div className="last-name-input">
-                                    <input className="create-user-ip" />
+                                    <input 
+                                        className="create-user-ip" 
+                                        name="last_name"
+                                        ref={register}
+                                        />
                                 </div>
                             </div>
                         </div>
@@ -42,7 +72,11 @@ const UserForm = () => {
                             </div>
 
                             <div className="phone-ip">
-                                <input className="create-user-ip" />
+                                <input 
+                                    className="create-user-ip" 
+                                    name="phone"
+                                    ref={register}
+                                    />
                             </div>
                         </div>
 
@@ -51,7 +85,11 @@ const UserForm = () => {
                                 Password
                             </div>
                             <div className="password-ip">
-                                <input className="create-user-ip" />
+                                <input 
+                                    className="create-user-ip" 
+                                    name="password"
+                                    ref={register}
+                                    />
                             </div>
                             
                         </div>
