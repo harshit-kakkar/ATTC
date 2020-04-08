@@ -2,75 +2,47 @@ import React from 'react'
 import axios from 'axios'
 import {useForm} from 'react-hook-form'
 import './styles.css'
+import UserForm from '../UserForm'
+
 
 
 const AdminCreate = () => {
+
+
+    const [btnClicked, setBtnClicked] = React.useState(1)
+    console.log(btnClicked)
+    const changeBtnClicked = ((val: number)=> {
+        setBtnClicked(val)
+    })
+
+    function LoadForm(){
+        if (btnClicked==1){
+            return(
+                <UserForm />
+            )
+        }
+        else {
+            return (
+                <div>
+                    Car form
+                </div>
+            )
+        }
+    }
+
     return (
         <div className="admin-create-container">
-            <div className="user-car-btn-container">
-                <div className="user-btn">
+            <div className="user-car-btn-container" >
+                <div className="user-btn" onClick={()=>changeBtnClicked(1)}>
                     Create User
                 </div>
-                <div className="car-btn">
+                <div className="car-btn" onClick={()=>changeBtnClicked(2)}>
                     Add Car
                 </div>
             </div>
-            <div className="admin-user-form">
-                <form>
-                    <div className="user-details">
-                        USER DETAILS
-                    </div>
-                    <div className="user-info-container">
 
-
-                        <div className="name">
-                            <div className="first-name">
-                                <div className="first-name-text">
-                                    First Name
-                                </div>
-                                <div className="first-name-input">
-                                    <input className="create-user-ip" />
-                                </div>
-                            </div>
-                            <div className="last-name">
-                                <div className="last-name-text">
-                                    Last Name
-                                </div>
-                                <div className="last-name-input">
-                                    <input className="create-user-ip" />
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="phone-user">
-                            <div className="phone-text">
-                                Phone
-                            </div>
-
-                            <div className="phone-ip">
-                                <input className="create-user-ip" />
-                            </div>
-                        </div>
-
-                        <div className="password-user">
-                            <div className="password-text">
-                                Password
-                            </div>
-                            <div className="password-ip">
-                                <input className="create-user-ip" />
-                            </div>
-                            
-                        </div>
-
-                        <button className="user-details-submit">
-                            Submit
-                        </button>                  
-
-
-                    </div>
-                </form>
-
-            </div>
+            {LoadForm()}
+            
         </div>
     )
 }
