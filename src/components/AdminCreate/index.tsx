@@ -1,6 +1,4 @@
 import React from 'react'
-import axios from 'axios'
-import {useForm} from 'react-hook-form'
 import './styles.css'
 import UserForm from '../UserForm'
 import CarForm from '../CarForm'
@@ -11,13 +9,12 @@ const AdminCreate = () => {
 
 
     const [btnClicked, setBtnClicked] = React.useState(1)
-    console.log(btnClicked)
     const changeBtnClicked = ((val: number)=> {
         setBtnClicked(val)
     })
 
     function LoadForm(){
-        if (btnClicked==1){
+        if (btnClicked===1){
             return(
                 <UserForm />
             )

@@ -5,10 +5,36 @@ import './styles.css'
 
 
 const CarForm = () => {
+
+    const [selectedOption, setSelectedOption] = React.useState('Car')
+
+    const { handleSubmit, register} = useForm();
+
+
+    // const url = "http://localhost:5000/car"
+    const url = 'https://attc-backend.herokuapp.com/car';
+    const onSubmit = (data: any) => {
+        data["car_type"] = selectedOption 
+        axios.post(url, data)
+            .then(response => {
+                if(response.status===201){
+                    alert("Added new car")
+                }
+
+            })
+            .catch(error => {
+                console.log(error)
+                alert("Couldn't add car")
+                
+            })
+    }
+
+
+
     return (
         <div className="admin-car-container">
             
-            <form>
+            <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="car-details">
                     CAR DETAILS
                 </div>
@@ -18,7 +44,11 @@ const CarForm = () => {
                             Phone Number
                         </div>
                         <div>
-                            <input className="create-car-ip" />
+                            <input 
+                                className="create-car-ip" 
+                                name="phone"
+                                ref={register}
+                                />
                         </div>
 
                     </div>
@@ -27,7 +57,11 @@ const CarForm = () => {
                             Vehicle Number
                         </div>
                         <div>
-                            <input className="create-car-ip" />
+                            <input 
+                                className="create-car-ip"
+                                name="car_number"
+                                ref={register} 
+                                />
                         </div>
                     </div>
                     <div className="vehicle-type">
@@ -35,7 +69,14 @@ const CarForm = () => {
                             Vehicle Type
                         </div>
                         <div>
-                            <input className="create-car-ip" />
+
+                            <select 
+                                className="dropdown-vehicle-type"
+                                onChange={e => setSelectedOption(e.target.value)}>
+                                >
+                                <option value="Car">Car</option>
+                                <option value="Bus">Bus</option>
+                            </select>
                         </div>
 
                     </div>

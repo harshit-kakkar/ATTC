@@ -54,7 +54,7 @@ const Homepage = (props : any) => {
         changeRechargeInputOpen()
         var bal = parseInt(input, 10)
         var rechargeRequestData = {"phone" : phone_no, "balance" : bal}
-        const rechargeUrl = "http://localhost:5000/recharge"
+        const rechargeUrl = "https://attc-backend.herokuapp.com/recharge"
         axios.put(rechargeUrl, rechargeRequestData)
             .then(response => {
                 var newBalanceUpdate = {"name" : dataJson["name"], "balance" : response.data["balance"]}

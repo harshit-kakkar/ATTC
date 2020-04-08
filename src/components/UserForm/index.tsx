@@ -14,8 +14,7 @@ const UserForm = () => {
     const onSubmit = (data: any) => {
         axios.post(url, data)
             .then(response => {
-                console.log(response)
-                if(response.status == 200){
+                if(response.status === 200){
                     alert("Created new user")
                 }
             })

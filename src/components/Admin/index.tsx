@@ -14,7 +14,7 @@ const Admin = (props:any) => {
      axios.post('https://attc-backend.herokuapp.com/admin', data)
          .then(response => {
                 
-                    if( response.status == 200){
+                    if( response.status === 200){
                         props.history.push("/admin/create")
                     }
          })

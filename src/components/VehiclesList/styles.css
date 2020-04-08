@@ -20,19 +20,23 @@
     flex-direction: row;
     border: 1px solid black;
     margin: 1em;
-    max-width: 30%;
-    height: 6em;
+    max-width: 40%;
+    height: 40%;
     padding: 1em;
     margin-top: 2em;
 }
 
 .details-button-div{
     position: relative;
-    left:8em;
+    left:14em;
 }
 
 .details-btn{
     background-color: green;
     color: white;
     padding: 1em;
+}
+
+.vehicle-details{
+    width: 40%;
 }

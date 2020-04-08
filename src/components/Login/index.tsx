@@ -16,7 +16,7 @@ const Login = (props : any) => {
         axios.post('https://attc-backend.herokuapp.com/login', data)
             .then(response => {
               
-                if (response.status = 200){   
+                if (response.status === 200){   
                     props.setPhone(data.phone)
 
                     //Changing the route by pushing it to props sent by "Route" of the "react-router-dom"

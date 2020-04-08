@@ -14,7 +14,7 @@ const VehicleDetails = (props : any) => {
         setTollsCrossed(tollsData)
     })
 
-    var url = "http://localhost:5000/car-details"
+    var url = "https://attc-backend.herokuapp.com/car-details"
     React.useEffect(() => {
         axios.get(url, {
             params: {
