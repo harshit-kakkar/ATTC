@@ -17,22 +17,56 @@ const AdminCreate = () => {
             </div>
             <div className="admin-user-form">
                 <form>
-                    <div>
-                        User Details
+                    <div className="user-details">
+                        USER DETAILS
                     </div>
-                    <div className="Name">
-                        <div>
-                            <input />
+                    <div className="user-info-container">
+
+
+                        <div className="name">
+                            <div className="first-name">
+                                <div className="first-name-text">
+                                    First Name
+                                </div>
+                                <div className="first-name-input">
+                                    <input className="create-user-ip" />
+                                </div>
+                            </div>
+                            <div className="last-name">
+                                <div className="last-name-text">
+                                    Last Name
+                                </div>
+                                <div className="last-name-input">
+                                    <input className="create-user-ip" />
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <input />
+
+                        <div className="phone-user">
+                            <div className="phone-text">
+                                Phone
+                            </div>
+
+                            <div className="phone-ip">
+                                <input className="create-user-ip" />
+                            </div>
                         </div>
-                    </div>
-                    <div className="phone-admin">
-                        <input />
-                    </div>
-                    <div className="password">
-                        <input />
+
+                        <div className="password-user">
+                            <div className="password-text">
+                                Password
+                            </div>
+                            <div className="password-ip">
+                                <input className="create-user-ip" />
+                            </div>
+                            
+                        </div>
+
+                        <button className="user-details-submit">
+                            Submit
+                        </button>                  
+
+
                     </div>
                 </form>
 

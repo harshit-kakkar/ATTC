@@ -12,29 +12,95 @@
     top: 2em;
     align-items: center ;
     justify-content: space-around;
-    font-size: 1.5em;
+    font-size: 1.75em;
+    color: black;
     
 }
 
 .car-btn{
-    background-color: rebeccapurple;
+    background-color: orange;
     width: 30%;
     height: 100%;
     justify-content: center;
+    line-height: 320%;
     
 
 }
 
 .user-btn{
-    background-color: rebeccapurple;
+    background-color: orange;
     width: 30%;
     height: 100%;
+    line-height: 320%;
 }
 
+
 .admin-user-form{
-    background-color: palegreen;
+    background-color: whitesmoke;
     height: 60%;
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 5%;
+    color: black;
+    padding: 2em;
 }
+
+.user-details{
+    font-size: 2em;
+    position: relative;
+    top: 1.5em;
+}
+
+.user-info-container{
+    margin-top: 6em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.name{
+    display: flex;
+    flex-direction: row;
+ 
+}
+
+.first-name, .last-name, .phone-user, .password-user{
+    display: flex;
+    flex-direction: row;
+    margin-top: 2em;
+}
+
+.phone-text, .password-text, .first-name-text, .last-name-text{
+    margin-right: 1em;
+    margin-left: 8em;
+    margin-bottom: 2em;
+    font-size: 1.5em;
+    margin-top: 0.85em;
+}
+
+/* .password-ip, .phone-ip, .first-name-input, .last-name-input{
+    width: 10%;
+    height: 2em;
+} */
+
+.create-user-ip{
+    height: 1em;
+    border-radius: 1em;
+    padding: 1em;
+    font-size: 1.25em;
+    border: 1px solid black;
+}
+
+.user-details-submit{
+    background-color: green;
+    color: white;
+    width: 20%;
+    height: 2em;
+    font-size: 1.5em;
+    border-radius: 18px;
+    position: relative;
+    left: 70%;
+    bottom: 4em;
+}
+
+
