@@ -4,7 +4,7 @@ import {useForm} from 'react-hook-form'
 
 
 
-const Admin = () => {
+const Admin = (props:any) => {
  //useForm hook to handle the form data.
 
  const { handleSubmit, register} = useForm();
@@ -13,7 +13,10 @@ const Admin = () => {
     //  axios.post('http://localhost:5000/login', data)
      axios.post('https://attc-backend.herokuapp.com/admin', data)
          .then(response => {
-                console.log(response)
+                
+                    if( response.status == 200){
+                        props.history.push("/admin/create")
+                    }
          })
          .catch(error => {
              alert("Incorrect Username/Password")

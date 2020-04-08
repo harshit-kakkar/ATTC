@@ -4,6 +4,7 @@ import Main from './components/Main'
 import Login from './components/Login'
 import Admin from './components/Admin'
 import {BrowserRouter as Router, Route, Switch, Redirect, Link} from 'react-router-dom';
+import AdminCreate from './components/AdminCreate';
 
 
 
@@ -49,8 +50,14 @@ function App() {
                 />
 
             <Route
-                   path="/admin"
+                exact   path="/admin"
                    component={Admin}
+
+                />
+
+            <Route 
+                  exact  path="/admin/create"
+                  component={AdminCreate}
 
                 />
             <Route render={() => <Redirect to={{pathname: "/login"}} />} />

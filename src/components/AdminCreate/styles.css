@@ -1,0 +1,40 @@
+.admin-create-container{
+    background-color: #323D4F;
+    color: white;
+    height: 91.9vh;
+}
+
+.user-car-btn-container{
+    display: flex;
+    flex-direction: row;
+    height: 10%;
+    position: relative;
+    top: 2em;
+    align-items: center ;
+    justify-content: space-around;
+    font-size: 1.5em;
+    
+}
+
+.car-btn{
+    background-color: rebeccapurple;
+    width: 30%;
+    height: 100%;
+    justify-content: center;
+    
+
+}
+
+.user-btn{
+    background-color: rebeccapurple;
+    width: 30%;
+    height: 100%;
+}
+
+.admin-user-form{
+    background-color: palegreen;
+    height: 60%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+}
