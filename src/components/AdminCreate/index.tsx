@@ -3,6 +3,7 @@ import axios from 'axios'
 import {useForm} from 'react-hook-form'
 import './styles.css'
 import UserForm from '../UserForm'
+import CarForm from '../CarForm'
 
 
 
@@ -23,9 +24,7 @@ const AdminCreate = () => {
         }
         else {
             return (
-                <div>
-                    Car form
-                </div>
+                <CarForm />
             )
         }
     }

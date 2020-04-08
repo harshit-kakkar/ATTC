@@ -38,7 +38,7 @@ const UserForm = () => {
 
                         <div className="phone-user">
                             <div className="phone-text">
-                                Phone
+                                Phone No. 
                             </div>
 
                             <div className="phone-ip">
