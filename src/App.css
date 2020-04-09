@@ -35,3 +35,13 @@
   color: white;
 }
 
+
+
+@media screen and (max-width: 512px){
+  .head-container{
+    font-size: 0.5em;
+    margin-left: 25%;
+    margin-right: 6em;
+  }
+
+}

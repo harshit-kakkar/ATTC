@@ -34,3 +34,21 @@
     margin-top: 1em;
     border-radius: 18px;
 }
+
+@media screen and (max-width: 512px){
+    .login{
+        margin-top: 20%;
+    }
+    .login-head{
+        margin-bottom: 1em;
+    }
+
+    .input-phone, .input-password{
+        width: 60%;
+        height: 1.5em;
+    }
+
+    .login-button{
+        width: 30%;
+    }
+}
