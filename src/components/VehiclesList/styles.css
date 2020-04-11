@@ -40,3 +40,38 @@
 .vehicle-details{
     width: 40%;
 }
+
+
+@media screen and ( max-width: 630px){
+    .vehicles{
+        width: 100%;
+    }
+
+    .details-button-div{
+        position: absolute;
+   
+    }
+
+    .vehicle-container{
+        max-width: 100%;
+        margin: 0.5em;
+    }
+
+    .vehicles-head{
+        font-size: 1.5em;
+        margin: auto;
+        margin-top: 1em;
+        margin-bottom: 1em;
+
+    }
+
+    .vehicle-number, .vehicle-type{
+        margin-top: 0.5em;
+    }
+
+    .vehicle-details{
+        width: 50%;
+    }
+
+    
+}
