@@ -40,3 +40,25 @@ ul{
 
 
 
+
+  @media screen and (max-width: 630px){
+    ul.ul-side-nav{
+      display: flex;
+      justify-content: space-evenly;
+      text-decoration: none;
+      list-style-type: none;
+
+
+    }
+    .sidenav{
+      width: 100%;
+    }
+
+    .sidenav ul li{
+      margin: 1em 0 20px;
+      margin-left: 0.5em;
+
+    }
+
+
+  }

@@ -26,7 +26,7 @@ const Navbar = () => {
 
     return (
         <div className="sidenav">
-            <ul>
+            <ul className="ul-side-nav">
                 <Link to='/main/home'>
                                          {/* setting the highlighted tab on "onclick"  */}
                     <li onClick={()=>setSelectedTab(1)}
