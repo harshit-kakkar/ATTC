@@ -73,5 +73,9 @@
         width: 50%;
     }
 
+    .vehicles-list{
+        min-height: 84%;
+    }
+
     
 }
