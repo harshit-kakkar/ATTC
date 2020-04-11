@@ -43,6 +43,10 @@
     border: 1px solid black;
 }
 
+.car-add-btn-div{
+    margin-top: 4em;
+}
+
 .car-details-add{
     background-color: green;
     color: white;
@@ -50,9 +54,8 @@
     height: 2.25em;
     font-size: 1.5em;
     border-radius: 18px;
-    position: relative;
-    left: 40%;
-    top: 2em;
+
+
 }
 
 .dropdown-vehicle-type{

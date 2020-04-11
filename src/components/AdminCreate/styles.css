@@ -1,7 +1,8 @@
 .admin-create-container{
     background-color: #323D4F;
     color: white;
-    height: 91.9vh;
+
+    
 }
 
 .user-car-btn-container{
@@ -61,6 +62,9 @@
 .name{
     display: flex;
     flex-direction: row;
+    width: 80%;
+    margin: auto;
+    justify-content: space-evenly;
  
 }
 
@@ -72,7 +76,7 @@
 
 .phone-text, .password-text, .first-name-text, .last-name-text{
     margin-right: 1em;
-    margin-left: 8em;
+    
     margin-bottom: 2em;
     font-size: 1.5em;
     margin-top: 0.85em;
@@ -102,5 +106,14 @@
     left: 70%;
     bottom: 4em;
 }
+
+.last-name, .first-name{
+    width: 50%;
+}
+
+.phone-user, .password-user{
+    margin-left: 10%;
+}
+
 
 

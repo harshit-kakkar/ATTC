@@ -81,9 +81,11 @@ const CarForm = () => {
 
                     </div>
 
-                    <button className="car-details-add">
-                        Add
-                    </button>
+                    <div className="car-add-btn-div">
+                        <button className="car-details-add">
+                            Add
+                        </button>
+                    </div>
                 </div>
             </form>
         </div>
