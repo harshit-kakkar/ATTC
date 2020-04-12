@@ -5,6 +5,7 @@ import Login from './components/Login'
 import Admin from './components/Admin'
 import {BrowserRouter as Router, Route, Switch, Redirect, Link} from 'react-router-dom';
 import AdminCreate from './components/AdminCreate';
+import Toll from './components/Toll';
 
 
 
@@ -60,6 +61,13 @@ function App() {
                   component={AdminCreate}
 
                 />
+
+            <Route 
+                  exact  path="/toll"
+                  component={Toll}
+
+                />
+
             <Route render={() => <Redirect to={{pathname: "/login"}} />} />
           </Switch>
         </section>

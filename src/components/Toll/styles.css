@@ -1,0 +1,50 @@
+.at-toll-container{
+    display: flex;
+    flex-direction: row;
+    height: 91.9vh;
+    background-color: #323D4F;
+}
+
+
+.image-upload-toll{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.toll-indication-off{
+    width: 70%;
+    background-color: rgb(136, 12, 12);
+}
+.toll-indication-on{
+    width: 70%;
+    background-color: rgb(28, 99, 19);
+}
+
+.files-upload-head{
+    font-size: 2em;
+    color: white;
+    position: relative;
+    bottom: 4em;
+}
+
+.image1-upload{
+    color: white;
+    font-size: 1em;
+    margin: 2em;
+}
+
+.toll-car-number-manual-input, .toll-car-number-submit{
+    margin: 2em;
+}
+
+.toll-car-number-manual-input{
+    height: 2em;
+}
+
+.toll-car-number-submit{
+    height: 2em;
+    width: 6em;
+}
