@@ -2,22 +2,19 @@ import React from 'react'
 import axios from 'axios'
 import './styles.css'
 import { useForm } from 'react-hook-form'
-
+import { Base64 } from 'js-base64';
 
 
 
 const Toll = () => {
 
-
-    const [image, setImage] = React.useState({ image_file: '', image_preview: '' })
+    const [image, setImage] = React.useState({ preview: '', raw: '' })
 
     const [indication, setIndication] = React.useState(false)
 
     const { handleSubmit, register } = useForm();
 
     const url = 'https://attc-backend.herokuapp.com/toll-crossed';
-
-    const apiUrl = 'https://api.ocr.space/parse/image';
 
 
 
@@ -56,49 +53,92 @@ const Toll = () => {
 
 
 
-
-
-    const handleChange = (e) => {
-        let image_as_base64 = URL.createObjectURL(e.target.files[0]);
-        let image_as_files = e.target.files[0]
-
+    const handleChange = (e: any) => {
         setImage({
-            image_preview: image_as_base64,
-            image_file: image_as_files
+            preview: URL.createObjectURL(e.target.files[0]),
+
+            // raw: e.target.files[0],
+            // base: Base64.encode(image.raw)
+            raw: Base64.encode(e.target.files[0])
+
 
         })
     }
 
 
 
+    // function handleImageChange(e:any) {
+    //     e.preventDefault();
+    //     let file = e.target.files[0];
+    //     let reader = new FileReader();
+    //     reader.readAsDataURL(file);
+    //     reader.onloadend = () => {
+    //       setImage({
+    //         file:,
+    //         base64: reader.result
+    //       });
+
+    //     };
+    //   }
+
+
+
+
+
 
     const machineLeaning = () => {
+        let bodyFormData = new FormData();
 
-        let formData = new FormData()
-        formData.append('base64', image.image_file)
 
-        axios.post(
-            apiUrl,
-            formData,
+        bodyFormData.set('url', 'https://i2-prod.mirror.co.uk/incoming/article16208005.ece/ALTERNATES/s810/0_BLP_CHP_nemberplates11356-seqnPNG.png')
+        bodyFormData.append('language', 'eng')
+        // let urli=https://i2-prod.mirror.co.uk/incoming/article16208005.ece/ALTERNATES/s810/0_BLP_CHP_nemberplates11356-seqnPNG.png;
+
+        axios.post('https://api.ocr.space/parse/image',
+            {
+                data:
+                    bodyFormData
+                // 'base64Image': { image: image.raw },
+                // 'url': 'https://i2-prod.mirror.co.uk/incoming/article16208005.ece/ALTERNATES/s810/0_BLP_CHP_nemberplates11356-seqnPNG.png',
+                // 'language': 'eng',
+                // 'isOverlayRequired': 'false',
+                // 'iscreatesearchablepdf': 'false',
+                // 'issearchablepdfhidetextlayer': 'false'
+
+
+
+            },
             {
                 headers: {
                     'apikey': 'helloworld',
-                    'Content-Type': 'mulitpart/form-data',
-                }
-            }
-        )
+                    // 'Accept': '*/*',
+                    // 'c'
+
+                },
+
+            })
             .then(response => {
+                // console.log(response)
                 console.log(response.data)
             })
-            .catch(err => {
-                console.log(err)
+            .catch(error => {
+                console.log(error)
+
+
             })
 
 
 
+        // console.log(image.raw)
+        // console.log(image.preview)
+        // let x = image.raw
+        // console.log(typeof (x))
 
-
-
+        // console.log(typeof (image.preview))
+        console.log(typeof (image.raw))
+        // console.log(typeof (image.base))
+        console.log(image.raw)
+        console.log(image.preview)
 
     }
 
