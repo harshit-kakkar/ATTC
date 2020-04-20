@@ -11,6 +11,8 @@ const Toll = () => {
 
     const [image, setImage] = React.useState({ image_file: '', image_preview: '' })
 
+    const [numberPlate, setNumberPlate] = React.useState('')
+
     const [indication, setIndication] = React.useState(false)
 
     const { handleSubmit, register } = useForm();
@@ -18,6 +20,10 @@ const Toll = () => {
     const url = 'https://attc-backend.herokuapp.com/toll-crossed';
 
     const apiUrl = 'https://api.ocr.space/parse/image';
+
+
+
+
 
 
 
@@ -87,9 +93,15 @@ const Toll = () => {
                 }
             }
         )
+
             .then(response => {
-                console.log(response.data)
+
+                console.log(response.data.ParsedResults[0].ParsedText)
+                setNumberPlate(response.data.ParsedResults[0].ParsedText)
+
+
             })
+
             .catch(err => {
                 console.log(err)
             })
@@ -126,6 +138,7 @@ const Toll = () => {
 
                         </input>
                         <button onClick={machineLeaning} >Apply ML</button>
+
                     </div>
                     <div>
 
@@ -134,6 +147,7 @@ const Toll = () => {
                         <input
                             className="toll-car-number-manual-input"
                             placeholder="Car Number"
+                            defaultValue={numberPlate}
                             name="car_number"
                             ref={register}
                         >
